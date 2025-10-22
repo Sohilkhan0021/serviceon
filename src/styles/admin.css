@@ -1,0 +1,125 @@
+/* Admin Panel Styles */
+
+.admin {
+  --admin-sidebar-width: 280px;
+  --admin-header-height: 64px;
+}
+
+.admin.sidebar-fixed .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: var(--admin-sidebar-width);
+  z-index: 1000;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+.dark .admin.sidebar-fixed .sidebar {
+  background: #1f2937;
+  border-right-color: #374151;
+}
+
+.admin.sidebar-collapse .sidebar {
+  width: 64px;
+}
+
+.admin.sidebar-collapse .sidebar-logo h3,
+.admin.sidebar-collapse .sidebar-menu {
+  display: none;
+}
+
+.admin.header-fixed .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: var(--admin-sidebar-width);
+  height: var(--admin-header-height);
+  z-index: 999;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .admin.header-fixed .header {
+  background: #1f2937;
+  border-bottom-color: #374151;
+}
+
+.admin.sidebar-collapse.header-fixed .header {
+  left: 64px;
+}
+
+.admin .wrapper {
+  margin-left: var(--admin-sidebar-width);
+  margin-top: var(--admin-header-height);
+  min-height: calc(100vh - var(--admin-header-height));
+}
+
+.admin.sidebar-collapse .wrapper {
+  margin-left: 64px;
+}
+
+.admin .sidebar-logo {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .admin .sidebar-logo {
+  border-bottom-color: #374151;
+}
+
+.admin .sidebar-menu {
+  padding: 1rem 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.admin .header-topbar {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dark .admin .header-topbar {
+  border-bottom-color: #374151;
+}
+
+.admin .header-toolbar {
+  padding: 1rem 1.5rem;
+}
+
+.admin .footer {
+  margin-top: auto;
+  border-top: 1px solid #e5e7eb;
+}
+
+.dark .admin .footer {
+  border-top-color: #374151;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .admin.sidebar-fixed .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .admin.sidebar-fixed .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .admin.header-fixed .header {
+    left: 0;
+  }
+  
+  .admin .wrapper {
+    margin-left: 0;
+  }
+}
+
+/* Animation for layout initialization */
+.layout-initialized .admin .sidebar,
+.layout-initialized .admin .header {
+  transition: all 0.3s ease;
+}
+

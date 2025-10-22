@@ -1,0 +1,193 @@
+/* Sand Color Hover Effects for Admin Panel */
+
+/* Sand color palette */
+:root {
+  --sand-50: #fefdf8;
+  --sand-100: #fdf9e7;
+  --sand-200: #faf2d3;
+  --sand-300: #f6e8b5;
+  --sand-400: #f0d98a;
+  --sand-500: #e8c85c;
+  --sand-600: #d4b847;
+  --sand-700: #b89d3a;
+  --sand-800: #9a8230;
+  --sand-900: #7d6a28;
+}
+
+/* Button hover effects */
+.sand-hover-button {
+  @apply transition-colors duration-200;
+}
+
+.sand-hover-button:hover {
+  background-color: var(--sand-100);
+  border-color: var(--sand-300);
+  color: var(--sand-800);
+}
+
+.sand-hover-button:active {
+  background-color: var(--sand-200);
+}
+
+/* Card hover effects */
+.sand-hover-card {
+  @apply transition-all duration-200;
+}
+
+.sand-hover-card:hover {
+  background-color: var(--sand-50);
+  border-color: var(--sand-200);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Table row hover effects */
+.sand-hover-row {
+  @apply transition-colors duration-150;
+}
+
+.sand-hover-row:hover {
+  background-color: var(--sand-50);
+}
+
+/* Input hover effects */
+.sand-hover-input {
+  @apply transition-colors duration-200;
+}
+
+.sand-hover-input:hover {
+  border-color: var(--sand-300);
+}
+
+.sand-hover-input:focus {
+  border-color: var(--sand-500);
+  box-shadow: 0 0 0 3px rgba(232, 200, 92, 0.1);
+}
+
+/* Badge hover effects */
+.sand-hover-badge {
+  @apply transition-all duration-200;
+}
+
+.sand-hover-badge:hover {
+  background-color: var(--sand-200);
+  color: var(--sand-800);
+  transform: scale(1.05);
+}
+
+/* Menu item hover effects */
+.sand-hover-menu {
+  @apply transition-colors duration-200;
+}
+
+.sand-hover-menu:hover {
+  background-color: var(--sand-100);
+  color: var(--sand-800);
+}
+
+/* Dropdown hover effects */
+.sand-hover-dropdown {
+  @apply transition-colors duration-200;
+}
+
+.sand-hover-dropdown:hover {
+  background-color: var(--sand-50);
+  color: var(--sand-700);
+}
+
+/* Avatar hover effects */
+.sand-hover-avatar {
+  @apply transition-all duration-200;
+}
+
+.sand-hover-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(232, 200, 92, 0.3);
+}
+
+/* Icon hover effects */
+.sand-hover-icon {
+  @apply transition-colors duration-200;
+}
+
+.sand-hover-icon:hover {
+  color: var(--sand-600);
+}
+
+/* Link hover effects */
+.sand-hover-link {
+  @apply transition-colors duration-200;
+}
+
+.sand-hover-link:hover {
+  color: var(--sand-600);
+  text-decoration-color: var(--sand-400);
+}
+
+/* Dark mode sand colors */
+.dark {
+  --sand-50: #2d2a1f;
+  --sand-100: #3d3828;
+  --sand-200: #4d4532;
+  --sand-300: #5d523c;
+  --sand-400: #6d5f46;
+  --sand-500: #7d6a28;
+  --sand-600: #8d7a2a;
+  --sand-700: #9d8a2c;
+  --sand-800: #ad9a2e;
+  --sand-900: #bdaa30;
+}
+
+/* Dark mode hover effects */
+.dark .sand-hover-button:hover {
+  background-color: var(--sand-100);
+  border-color: var(--sand-300);
+  color: var(--sand-200);
+}
+
+.dark .sand-hover-card:hover {
+  background-color: var(--sand-50);
+  border-color: var(--sand-200);
+}
+
+.dark .sand-hover-row:hover {
+  background-color: var(--sand-50);
+}
+
+.dark .sand-hover-input:hover {
+  border-color: var(--sand-300);
+}
+
+.dark .sand-hover-input:focus {
+  border-color: var(--sand-500);
+  box-shadow: 0 0 0 3px rgba(125, 106, 40, 0.2);
+}
+
+.dark .sand-hover-badge:hover {
+  background-color: var(--sand-200);
+  color: var(--sand-100);
+}
+
+.dark .sand-hover-menu:hover {
+  background-color: var(--sand-100);
+  color: var(--sand-200);
+}
+
+.dark .sand-hover-dropdown:hover {
+  background-color: var(--sand-50);
+  color: var(--sand-300);
+}
+
+.dark .sand-hover-avatar:hover {
+  box-shadow: 0 4px 8px rgba(125, 106, 40, 0.4);
+}
+
+.dark .sand-hover-icon:hover {
+  color: var(--sand-400);
+}
+
+.dark .sand-hover-link:hover {
+  color: var(--sand-400);
+  text-decoration-color: var(--sand-500);
+}
+
