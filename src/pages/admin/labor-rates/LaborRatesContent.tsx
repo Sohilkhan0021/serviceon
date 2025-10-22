@@ -13,7 +13,10 @@ const LaborRatesContent = () => {
     weekendRate: '95.00',
     holidayRate: '110.00',
     currency: 'USD',
-    billingUnit: 'hour'
+    billingUnit: 'hour',
+    laborCategory: '',
+    selectedGarage: '',
+    notes: '',
   });
 
   const [isSaving, setIsSaving] = useState(false);
@@ -125,6 +128,62 @@ const LaborRatesContent = () => {
                 })}
               </CardContent>
             </Card>
+
+            {/* Additional Labor Settings */}
+<Card>
+  <CardHeader>
+    <CardTitle>Additional Labor Settings</CardTitle>
+  </CardHeader>
+  <CardContent className="space-y-6">
+
+    {/* Labor Category */}
+    <div className="space-y-2">
+      <Label>Labor Category</Label>
+      <select
+        value={formData.laborCategory || ''}
+        onChange={(e) => handleInputChange('laborCategory', e.target.value)}
+        className="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200"
+      >
+        <option value="">Select Category</option>
+        <option value="mechanical">Mechanical</option>
+        <option value="electrical">Electrical</option>
+        <option value="bodywork">Bodywork</option>
+        <option value="diagnostic">Diagnostic</option>
+      </select>
+      <p className="text-sm text-gray-500">Choose the type of labor rate this configuration applies to.</p>
+    </div>
+
+    {/* Garage Selector */}
+    <div className="space-y-2">
+      <Label>Garage</Label>
+      <select
+        value={formData.selectedGarage || ''}
+        onChange={(e) => handleInputChange('selectedGarage', e.target.value)}
+        className="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200"
+      >
+        <option value="">Select Garage</option>
+        <option value="garage1">Garage 1</option>
+        <option value="garage2">Garage 2</option>
+        <option value="garage3">Garage 3</option>
+      </select>
+      <p className="text-sm text-gray-500">Assign this rate configuration to a specific garage.</p>
+    </div>
+
+    {/* Notes / Remarks */}
+    <div className="space-y-2">
+      <Label>Notes / Remarks</Label>
+      <textarea
+        value={formData.notes || ''}
+        onChange={(e) => handleInputChange('notes', e.target.value)}
+        rows={3}
+        placeholder="Add any special conditions or notes here..."
+        className="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200"
+      />
+    </div>
+
+  </CardContent>
+</Card>
+
 
             {/* Billing Settings */}
             <Card>

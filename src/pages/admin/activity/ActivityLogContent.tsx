@@ -205,6 +205,18 @@ const ActivityLogContent = () => {
                 </div>
               </div>
               <div className="flex gap-2">
+               <Select defaultValue="all">
+                <SelectTrigger className="w-40">
+                  <SelectValue placeholder="Action Type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Actions</SelectItem>
+                  <SelectItem value="created">Created</SelectItem>
+                  <SelectItem value="updated">Updated</SelectItem>
+                  <SelectItem value="deleted">Deleted</SelectItem>
+                  <SelectItem value="disabled">Disabled</SelectItem>
+                </SelectContent>
+              </Select>
                 <Select value={typeFilter} onValueChange={setTypeFilter}>
                   <SelectTrigger className="w-40">
                     <SelectValue placeholder="Type" />
@@ -229,6 +241,7 @@ const ActivityLogContent = () => {
                     <SelectItem value="month">This Month</SelectItem>
                   </SelectContent>
                 </Select>
+                
                 <Button variant="outline" className="flex items-center gap-2">
                   <Filter className="h-4 w-4" />
                   More Filters

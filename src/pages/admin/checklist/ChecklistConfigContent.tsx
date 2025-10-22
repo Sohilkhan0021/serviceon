@@ -18,6 +18,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Switch } from '@/components/ui/switch';
+import { Image, PenTool } from 'lucide-react';
+
 import { 
   Select, 
   SelectContent, 
@@ -35,7 +37,7 @@ import {
 
 interface ChecklistItem {
   id: string;
-  type: 'text' | 'textarea' | 'number' | 'checkbox';
+  type: 'text' | 'textarea' | 'number' | 'checkbox' |'photo' | 'signature';
   label: string;
   placeholder?: string;
   required: boolean;
@@ -94,7 +96,10 @@ const ChecklistConfigContent = () => {
     { value: 'text', label: 'Short Text', icon: Type },
     { value: 'textarea', label: 'Long Text', icon: Type },
     { value: 'number', label: 'Number', icon: Hash },
-    { value: 'checkbox', label: 'Checkbox', icon: CheckSquare }
+    { value: 'checkbox', label: 'Checkbox', icon: CheckSquare },
+    { value: 'photo', label: 'Photo Upload', icon: Image },
+    { value: 'signature', label: 'Signature', icon: PenTool },
+
   ];
 
   const addItem = (newItem: Omit<ChecklistItem, 'id' | 'order'>) => {
@@ -170,6 +175,18 @@ const ChecklistConfigContent = () => {
             <span className="text-sm text-gray-500">Check if applicable</span>
           </div>
         );
+        case 'photo':
+      return (
+        <div className="border rounded-lg p-3 bg-gray-50 dark:bg-gray-800 text-gray-500 text-sm">
+          [Photo Upload Placeholder]
+        </div>
+      );
+    case 'signature':
+      return (
+        <div className="border rounded-lg p-3 bg-gray-50 dark:bg-gray-800 text-gray-500 text-sm">
+          [Signature Field Placeholder]
+        </div>
+      );
       default:
         return null;
     }
@@ -396,6 +413,8 @@ const AddItemForm = ({ onSubmit, onCancel }: {
             <SelectItem value="textarea">Long Text</SelectItem>
             <SelectItem value="number">Number</SelectItem>
             <SelectItem value="checkbox">Checkbox</SelectItem>
+            <SelectItem value="photo">Photo Upload</SelectItem>
+            <SelectItem value="signature">Signature</SelectItem>
           </SelectContent>
         </Select>
       </div>
