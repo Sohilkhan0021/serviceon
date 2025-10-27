@@ -1,5 +1,8 @@
 {
   "rewrites": [
-    { "source": "/serviceon/(.*)", "destination": "/serviceon/index.html" }
+    {
+      "source": "/serviceon/(.*)",
+      "destination": "/serviceon/index.html"
+    }
   ]
 }

@@ -43,7 +43,7 @@ export default defineConfig(({ mode }) => ({
     }
   },
 
-  base: '/serviceon/', 
+  base: '/serviceon/',
 
   resolve: {
     alias: {
@@ -52,7 +52,14 @@ export default defineConfig(({ mode }) => ({
   },
 
   build: {
-    outDir: 'dist/serviceon', 
-    chunkSizeWarningLimit: 3000
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name]-[hash].js`,
+        chunkFileNames: `assets/[name]-[hash].js`,
+        assetFileNames: `assets/[name]-[hash].[ext]`
+      }
+    }
   }
+
 }));
