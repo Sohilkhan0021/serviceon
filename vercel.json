@@ -3,6 +3,10 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/serviceon/(.*)",
+      "destination": "/serviceon/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/serviceon/index.html"
     }
