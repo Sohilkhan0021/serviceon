@@ -44,9 +44,9 @@ export default defineConfig(({ mode }) => ({
       plugins: [tailwindcss()]
     }
   },
-  
+
   //  base changes automatically based on environment
-  base: mode === 'development' ? '/serviceon' : './',
+  base: mode === 'development' ? '/serviceon' : '/serviceon',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
