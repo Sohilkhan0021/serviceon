@@ -1,16 +1,8 @@
 {
-  "public": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    {
-      "source": "/serviceon",
-      "destination": "/serviceon/index.html"
-    },
-    {
-      "source": "/serviceon/:path((?!assets/).*)",
-      "destination": "/serviceon/index.html"
-    }
+    { "source": "/serviceon/(.*)", "destination": "/serviceon/index.html" }
   ],
   "headers": [
     {

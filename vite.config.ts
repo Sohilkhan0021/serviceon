@@ -43,7 +43,7 @@ export default defineConfig(({ mode }) => ({
       plugins: [tailwindcss()]
     }
   },
-  // ✅ same base folder name for both envs
+  //  same base folder name for both envs
   base: '/serviceon/',
   resolve: {
     alias: {
