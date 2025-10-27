@@ -11,5 +11,8 @@
       "src": "/serviceon/(.*)",
       "dest": "dist/index.html"
     }
+  ],
+  "rewrites": [
+    { "source": "/serviceon/:path*", "destination": "/serviceon/index.html" }
   ]
 }

@@ -52,7 +52,7 @@ export default defineConfig(({ mode }) => ({
   },
 
   build: {
-    outDir: 'dist',
+    outDir: 'dist/serviceon',
     rollupOptions: {
       output: {
         entryFileNames: `assets/[name]-[hash].js`,
