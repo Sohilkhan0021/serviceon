@@ -46,7 +46,7 @@ export default defineConfig(({ mode }) => ({
   },
 
   //  base changes automatically based on environment
-  base: mode === 'development' ? '/serviceon' : '/serviceon',
+  base: mode === 'development' ? '/serviceon' : './',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
