@@ -30,7 +30,6 @@
 
 
 
-
 import { fileURLToPath, URL } from 'node:url';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -43,14 +42,17 @@ export default defineConfig(({ mode }) => ({
       plugins: [tailwindcss()]
     }
   },
-  //  same base folder name for both envs
-  base: '/serviceon/',
+
+  base: '/serviceon/', 
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+
   build: {
+    outDir: 'dist/serviceon', 
     chunkSizeWarningLimit: 3000
   }
 }));

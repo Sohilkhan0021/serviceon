@@ -1,9 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "public": "dist",
   "rewrites": [
     {
-      "source": "/serviceon/(.*)",
+      "source": "/serviceon(/.*)?",
       "destination": "/serviceon/index.html"
     }
   ]
