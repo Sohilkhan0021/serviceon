@@ -1,6 +1,18 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
-    { "source": "/", "destination": "/serviceon/index.html" },
-    { "source": "/serviceon/(.*)", "destination": "/serviceon/$1" }
+    {
+      "source": "/(.*)",
+      "destination": "/serviceon/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/serviceon/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
   ]
 }
