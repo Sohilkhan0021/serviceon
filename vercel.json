@@ -3,11 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/serviceon/(.*)",
-      "destination": "/serviceon/index.html"
-    },
-    {
-      "source": "/(.*)",
+      "source": "/serviceon(/.*)?",
       "destination": "/serviceon/index.html"
     }
   ],

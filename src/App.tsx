@@ -18,8 +18,8 @@ const App = () => {
 
   return (
     <BrowserRouter
-      // basename={BASE_URL}
-      basename={import.meta.env.DEV ? '/serviceon' : ''}
+      basename={BASE_URL}
+      // basename={import.meta.env.DEV ? '/serviceon' : ''}
       future={{
         v7_relativeSplatPath: true,
         v7_startTransition: true
