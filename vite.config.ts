@@ -29,7 +29,6 @@
 
 
 
-
 import { fileURLToPath, URL } from 'node:url';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
@@ -42,15 +41,12 @@ export default defineConfig(({ mode }) => ({
       plugins: [tailwindcss()]
     }
   },
-
   base: '/serviceon/',
-
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-
   build: {
     outDir: 'dist/serviceon',
     rollupOptions: {
@@ -61,5 +57,4 @@ export default defineConfig(({ mode }) => ({
       }
     }
   }
-
 }));
