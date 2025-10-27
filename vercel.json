@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/serviceon(/.*)?",
-      "destination": "/serviceon/index.html"
+      "destination": "/"
     }
   ],
   "headers": [
