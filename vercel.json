@@ -1,15 +1,23 @@
 {
-  "builds": [
-    { "src": "dist/**/*", "use": "@vercel/static" }
-  ],
-  "routes": [
+  "public": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
     {
-      "src": "/serviceon/assets/(.*)",
-      "dest": "dist/assets/$1"
+      "source": "/serviceon",
+      "destination": "/serviceon/index.html"
     },
     {
-      "src": "/serviceon/(.*)",
-      "dest": "dist/index.html"
+      "source": "/serviceon/:path((?!assets/).*)",
+      "destination": "/serviceon/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/serviceon/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
     }
   ]
 }
