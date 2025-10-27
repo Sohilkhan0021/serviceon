@@ -31,7 +31,7 @@ const UsersListPage = () => {
               <a href="#" className="btn btn-sm btn-light">
                 Export CSV
               </a>
-              <a href="/admin/users/create" className="btn btn-sm btn-primary">
+              <a href="/serviceon/admin/users/create" className="btn btn-sm btn-primary">
                 Add User
               </a>
             </ToolbarActions>
