@@ -1,8 +1,12 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/serviceon/(.*)",
-      "destination": "/serviceon/index.html"
+      "src": "/serviceon/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/serviceon/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
