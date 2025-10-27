@@ -17,8 +17,8 @@ const App = () => {
   }, [settings]);
 
   return (
-    <BrowserRouter
-      basename={BASE_URL}
+    <BrowserRouter basename="/serviceon"
+      // basename={BASE_URL}
       // basename={import.meta.env.DEV ? '/serviceon' : ''}
       future={{
         v7_relativeSplatPath: true,
